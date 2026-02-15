@@ -1,0 +1,221 @@
+.about-page {
+  padding: 40px 0;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.mission-section {
+  margin-bottom: 60px;
+}
+
+.mission-section h2 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mission-card {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255,107,0,0.1);
+}
+
+.mission-icon {
+  width: 60px;
+  height: 60px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.mission-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 50px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  color: white;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.advantages-section {
+  margin-bottom: 60px;
+}
+
+.advantages-section h2 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.advantage-card {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.advantage-card svg {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.advantage-card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.advantage-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.process-section {
+  margin-bottom: 60px;
+}
+
+.process-section h2 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.process-timeline {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.process-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 60px;
+  bottom: -20px;
+  width: 2px;
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+}
+
+.step-content {
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.step-content h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .mission-cards,
+  .advantages-grid,
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-section {
+    padding: 30px;
+  }
+  
+  .process-step {
+    gap: 15px;
+  }
+}

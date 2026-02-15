@@ -1,0 +1,237 @@
+
+.admin-page {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* Боковое меню */
+.admin-sidebar {
+  width: 260px;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar-header {
+  padding: 25px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header .logo-icon {
+  font-size: 2rem;
+}
+
+.sidebar-header h2 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: rgba(255,107,0,0.05);
+  color: var(--primary);
+}
+
+.nav-item.active {
+  background: rgba(255,107,0,0.1);
+  color: var(--primary);
+  border-left: 3px solid var(--primary);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border: none;
+  background: none;
+  color: #f44336;
+  cursor: pointer;
+  border-top: 1px solid #eee;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(244,67,54,0.05);
+}
+
+/* Основной контент */
+.admin-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 30px;
+}
+
+.content-title {
+  color: var(--secondary);
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Сетка графиков */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.chart-card h3 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Форма входа */
+.admin-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.login-box h2 {
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.login-box input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-box button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255,107,0,0.3);
+}
+
+.login-hint {
+  margin-top: 20px;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.settings-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.settings-card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    width: 80px;
+  }
+  
+  .sidebar-header h2,
+  .nav-item span,
+  .logout-btn span {
+    display: none;
+  }
+  
+  .admin-content {
+    margin-left: 80px;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .admin-content {
+    margin-left: 0;
+  }
+  
+  .nav-item {
+    justify-content: center;
+  }
+}
